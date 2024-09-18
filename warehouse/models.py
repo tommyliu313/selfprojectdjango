@@ -13,8 +13,8 @@ class Warehouse(models.Model):
     main_img = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
     img1 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
     img2 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
-    threemonrent = models.DecimalField()
-    sixmonrent = models.DecimalField()
-    ninemonrent = models.DecimalField()
+    threemonrent = models.DecimalField(decimal_places=2, max_digits=5)
+    sixmonrent = models.DecimalField(decimal_places=2, max_digits=5)
+    ninemonrent = models.DecimalField(decimal_places=2, max_digits=5)
     is_listed = models.BooleanField()
     
