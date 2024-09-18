@@ -1,11 +1,11 @@
 from django.db import models
-
+from warehouse.choices import district_choices
 # Create your models here.
 
 class Warehouse(models.Model):
     title = models.CharField(max_length=50)
     region = models.CharField()
-    district = models.CharField()
+    district = models.CharField(max_length=50, choices=district_choices.items())
     floor = models.IntegerField()
     room = models.CharField()
     description = models.TextField()
