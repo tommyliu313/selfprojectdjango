@@ -18,3 +18,9 @@ district_choices = {
     'Southern': 'Southern',
     'Wan Chai': 'Wan Chai',
 }
+
+region_choices = {
+    "Hong Kong Island": "Hong Kong Island",
+    "New Territories": "New Territories",
+    "Kowloon": "Kowloon"
+}
