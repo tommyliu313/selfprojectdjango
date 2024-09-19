@@ -1,5 +1,7 @@
 # selfprojectdjango
 
+# Description
+This is a basic warehouse management project.
 # User who use this repository
 ## Admin
 Admin can edit, delete, make any modification of records from the database.
