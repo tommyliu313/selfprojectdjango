@@ -2,6 +2,12 @@
 
 # Description
 This is a basic warehouse management project.
+
+# Version applied in this project
+Python: 3.8
+Django: 4.12
+PostgreSQL
+
 # User who use this repository
 ## Admin
 Admin can edit, delete, make any modification of records from the database.
