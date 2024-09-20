@@ -6,7 +6,7 @@ This is a basic warehouse management project.
 # Version applied in this project
 Python: 3.8
 Django: 4.12
-PostgreSQL
+PostgreSQL: 14.13
 
 # User who use this repository
 ## Admin
