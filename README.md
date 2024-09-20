@@ -31,3 +31,11 @@ sudo -u postgres psql
 
 The repository is created by using ORM models and PostgreSQL. 
 You have to make connection and changes in the DATABASE array from the path "newprojecttrial/settings.py".
+
+
+# Navbar Should Contain
+* About
+* Districts
+* Services
+* Login
+* Register
