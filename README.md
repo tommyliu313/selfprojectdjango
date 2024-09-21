@@ -1,7 +1,8 @@
 # selfprojectdjango
 
 # Description
-This is a basic warehouse management project.
+This is a basic warehouse management project, which is created by using ORM models , PostgreSQL and Python Django framework. 
+
 
 # Version applied in this project
 Python: 3.8
@@ -11,10 +12,11 @@ PostgreSQL: 14.13
 # User who use this repository
 ## Admin
 Admin can edit, delete, make any modification of records from the database.
+They can also choose to list out the warehouse whether its storage quota is full or not.
 ## Registered User 
-
+Registered User can view the orders, including when and where to rent.
 ## Unregistered User
-Unregistered user can only view the .....
+Unregistered user can only view the ,but cannot access the 
 
 # Overview of the models
 
@@ -29,8 +31,7 @@ apt list --upgradable
 sudo apt install pgadmin4
 sudo -u postgres psql
 
-The repository is created by using ORM models and PostgreSQL. 
-You have to make connection and changes in the DATABASE array from the path "newprojecttrial/settings.py".
+You are advised to make connection and changes in the DATABASE array from the path "newprojecttrial/settings.py".
 
 
 # Navbar Should Contain
@@ -39,3 +40,25 @@ You have to make connection and changes in the DATABASE array from the path "new
 * Services
 * Login
 * Register
+
+# URL Path Planning
+## Example from Sir
+| Url      | App | REST Method | Description |
+| -------- | ---- | ----------- | --- |
+| admin    | None   | POST        | Admin Page    |
+| about    | Page     | POST        |    |
+| listings |   listings   |    GET         | Overview of Building    |
+| listings/<int:id> |  listings    | GET             | Building Specific Information    |
+| accounts     | accounts     | GET         |     |
+| accounts/login     | accounts     | POST         |  Registered User Login   |
+| accounts/register     | accounts     | GET         |  Create a user    |
+| accounts/dashboard | accounts     |   GET          | Dashboard of registered user    |
+| contacts     |  contacts    | GET         |     |
+
+| Url      | App | REST Method | Description |
+| -------- | ---- | ----------- | --- |
+| admin    | None   | POST        | Admin Page    |
+| about    | user     | POST        | Admin Page    |
+| warehouses | warehouse   |    GET         | Overview of Building    |
+| warehouses/<int:id> | warehouse   |    GET         | Overview of Building    |
+| transfer | transfer   |    GET         | Overview of Building    |The repository is 
