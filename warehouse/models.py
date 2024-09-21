@@ -17,4 +17,5 @@ class Warehouse(models.Model):
     sixmonrent = models.DecimalField(decimal_places=2, max_digits=5)
     ninemonrent = models.DecimalField(decimal_places=2, max_digits=5)
     is_listed = models.BooleanField()
-    
+    def __str__(self):
+        return self.title    
