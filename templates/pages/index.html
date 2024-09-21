@@ -1,10 +1,86 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<section>
-    <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, itaque quas? Recusandae ducimus ad voluptate velit corporis, exercitationem, eligendi rerum, delectus facilis pariatur blanditiis laudantium dolor quae quia architecto eveniet?
-    </p>
-</section>
+    <div class="col">
+    <div id="photoslide" class="carousel slide" data-ride="carousel" role="listbox" style="width: 75rem; object-fit: contain">
+    <ol class="carousel-indicators">
+      <li data-target="#photoslide" data-slide-to="0" class="active"></li>
+      <li data-target="#photoslide" data-slide-to="1"></li>
+      <li data-target="#photoslide" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="position: relative;">
+        <img class="rounded w-100 img-fluid" src={% static "photo/photo1.jpg" %} alt="First slide" style=" object-fit: contain;">
+        <div class="carousel-caption">
+            <h4 class="text-center">Item 1</h4>
+            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas unde, asperiores dolorem a necessitatibus neque cupiditate labore possimus nesciunt atque fuga provident odio sunt quasi tempore! Laboriosam ex hic repellat!</p>
+        </div>
+      </div>
+      <div class="carousel-item" style="position: relative;">
+        <img class="rounded w-100 img-fluid" src={% static "photo/photo2.jpg" %} alt="Second slide" style=" object-fit: contain;">
+        <div class="carousel-caption">
+            <h4 class="text-center">Item 2</h4>
+            <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti aperiam assumenda officia repudiandae beatae similique voluptatem ducimus, quibusdam, facilis incidunt reprehenderit tenetur in minima magni ipsam dicta iusto itaque? Blanditiis.</p>
+        </div>
+      </div>
+      <div class="carousel-item" style="position: relative;">
+        <img class="rounded w-100 img-fluid" src={% static "photo/photo3.jpg" %} alt="Third slide" style=" object-fit: contain;">
+        <div class="carousel-caption">
+            <h4 class="text-center">Item 3</h4>
+            <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti aperiam assumenda officia repudiandae beatae similique voluptatem ducimus, quibusdam, facilis incidunt reprehenderit tenetur in minima magni ipsam dicta iusto itaque? Blanditiis.</p>
 
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#photoslide" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#photoslide" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+<br>
+<div style="display: block; border: 3px solid #000000">
+    <span>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores vel, minima deleniti reprehenderit porro deserunt, iure magni labore, quia itaque aperiam dolore sapiente libero unde possimus repellendus commodi recusandae. Quasi.
+    </span>
+</div>
+<div class="row">
+    <div class="col">
+        <h1 class="text-left">Hello World.</h1>
+        <p class="text-left">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium nemo quasi mollitia voluptates labore, ut vel error repudiandae inventore? Itaque ullam officia excepturi temporibus velit perspiciatis aut laborum, aliquid pariatur.</p>
+    </div>
+</div>
+<div class="card-columns">
+    <div class="card bg-warning">
+    <img src="https://picsum.photos/500/400" alt="" class="card-img img-fluid" style="border-radius: 25% 25% 25% 25%;">
+    <h4 class="card-title text-center">Card Title</h4>
+    <h4 class="card-subtitle text-muted text-center">Card Subtitle</h4>
+    <p class="card-text text-center">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium eos reiciendis accusantium, enim placeat neque laudantium cumque eveniet impedit quasi autem libero modi amet perferendis commodi tempora quam sunt earum.
+    </p>
+    <button class="btn btn-outline-primary">Read More</button>
+</div>
+<div class="card bg-warning">
+    <img src="https://picsum.photos/500/400" alt="" class="card-img img-fluid" style="border-radius: 25% 25% 25% 25%;">
+    <h4 class="card-title text-center">Card Title</h4>
+    <h4 class="card-subtitle text-muted text-center">Card Subtitle</h4>
+    <p class="card-text text-center">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium eos reiciendis accusantium, enim placeat neque laudantium cumque eveniet impedit quasi autem libero modi amet perferendis commodi tempora quam sunt earum.
+    </p>
+    <button class="btn btn-outline-primary">Read More</button>
+</div>
+<div class="card bg-warning">
+    <img src="https://picsum.photos/500/400" alt="" class="card-img img-fluid" style="border-radius: 25% 25% 25% 25%;">
+    <h4 class="card-title text-center">Card Title</h4>
+    <h4 class="card-subtitle text-muted text-center">Card Subtitle</h4>
+    <p class="card-text text-center">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium eos reiciendis accusantium, enim placeat neque laudantium cumque eveniet impedit quasi autem libero modi amet perferendis commodi tempora quam sunt earum.
+    </p>
+    <button class="btn btn-outline-primary">Read More</button>
+</div>
+</div>
 {% endblock %}
