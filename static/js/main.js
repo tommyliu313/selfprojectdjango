@@ -15,6 +15,3 @@ $(window).scroll(function(e){
        $("button.button.is-link.modal-button").addClass("hidden");}
   });
 
-  function backtoTop(){
-    window.location.assign("#top");
-}
