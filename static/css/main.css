@@ -25,13 +25,23 @@
     border-radius: 25% 25% 25% 25%;
     padding: 50px;
   }
-  #caroitemimg{
+  #caroitemimg {
     object-fit: contain;
   }
 
-  ul #sns{
+  ul#sns {
     list-style-type: none;
   }
-  ul#sns li{
+
+  ul#sns li {
     display: inline;
   }
+
+  button.button.is-link.modal-button{
+
+  position: fixed;
+  left: 92%;
+  right: 73%;
+  top: 93.41%;
+  bottom: 2.53%;
+}
