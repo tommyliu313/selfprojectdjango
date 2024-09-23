@@ -39,9 +39,8 @@
 
   button.button.is-link.modal-button{
 
-  position: fixed;
+  position: relative;
   left: 92%;
-  right: 73%;
   top: 93.41%;
   bottom: 2.53%;
 }
