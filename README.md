@@ -45,8 +45,8 @@ You are advised to make connection and changes in the DATABASE array from the pa
 ## Example from Sir
 | Url      | App | REST Method | Description |
 | -------- | ---- | ----------- | --- |
-| admin    | None   | POST        | Admin Page    |
-| about    | Page     | POST        |    |
+| admin    | None   | GET        | Admin Page    |
+| about    | Page     | GET        |    |
 | listings |   listings   |    GET         | Overview of Building    |
 | listings/<int:id> |  listings    | GET             | Building Specific Information    |
 | accounts     | accounts     | GET         |     |

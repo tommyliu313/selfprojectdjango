@@ -9,8 +9,12 @@ function openeye(){
 }
 
 $(window).scroll(function(e){
-    if ($(window).scrollTop()>=100 && $(window).scrollTop() !=0)
-       $("button.button.is-link.modal-button").removeClass("hidden");
-    else
-       $("button.button.is-link.modal-button").addClass("hidden");
+    if ($(window).scrollTop()>=100 && $(window).scrollTop() !=0){
+       $("button.button.is-link.modal-button").removeClass("hidden");}
+    else{
+       $("button.button.is-link.modal-button").addClass("hidden");}
   });
+
+  function backtoTop(){
+    window.location.assign("#top");
+}
