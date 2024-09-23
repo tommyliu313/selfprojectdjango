@@ -46,9 +46,11 @@ You are advised to make connection and changes in the DATABASE array from the pa
 | Url      | App | REST Method | Description |
 | -------- | ---- | ----------- | --- |
 | admin    | None   | GET        | Admin Page    |
-| about    | Page     | GET        |    |
+| about    | Page     | GET        |  About Page  |
 | listings |   listings   |    GET         | Overview of Building    |
 | listings/<int:id> |  listings    | GET             | Building Specific Information    |
+| listings/?page=<number:int> | listings | POST
+| listings/search?<parameters:int> | listings | POST | Search Any Results
 | accounts     | accounts     | GET         |     |
 | accounts/login     | accounts     | POST         |  Registered User Login   |
 | accounts/register     | accounts     | GET         |  Create a user    |
@@ -61,4 +63,4 @@ You are advised to make connection and changes in the DATABASE array from the pa
 | about    | user     | POST        | Admin Page    |
 | warehouses | warehouse   |    GET         | Overview of Building    |
 | warehouses/<int:id> | warehouse   |    GET         | Overview of Building    |
-| transfer | transfer   |    GET         | Overview of Building    |The repository is 
+| transfer | transfer   |    GET         | show records  |
