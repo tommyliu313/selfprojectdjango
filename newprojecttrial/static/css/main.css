@@ -28,3 +28,10 @@
   #caroitemimg{
     object-fit: contain;
   }
+
+  ul #sns{
+    list-style-type: none;
+  }
+  ul#sns li{
+    display: inline;
+  }
