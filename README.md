@@ -5,8 +5,7 @@ This is a basic warehouse management project, which is created by using ORM mode
 
 
 # Version applied in this project
-Python: 3.8
-Django: 4.12
+vDjango: 4.12
 PostgreSQL: 14.13
 
 # User who use this repository
@@ -14,7 +13,7 @@ PostgreSQL: 14.13
 Admin can edit, delete, make any modification of records from the database.
 They can also choose to list out the warehouse whether its storage quota is full or not.
 ## Registered User 
-Registered User can view the orders, including when and where to rent.
+Registered User can view the orders, including when and where to rent
 ## Unregistered User
 Unregistered user can only view the ,but cannot access the 
 
@@ -49,7 +48,7 @@ You are advised to make connection and changes in the DATABASE array from the pa
 | about    | Page     | GET        |  About Page  |
 | listings |   listings   |    GET         | Overview of Building    |
 | listings/<int:id> |  listings    | GET             | Building Specific Information    |
-| listings/?page=<number:int> | listings | POST
+| listings/?page=<number:int> | listings | POST | Show Building in pages
 | listings/search?<parameters:int> | listings | POST | Search Any Results
 | accounts     | accounts     | GET         |     |
 | accounts/login     | accounts     | POST         |  Registered User Login   |
@@ -59,8 +58,15 @@ You are advised to make connection and changes in the DATABASE array from the pa
 
 | Url      | App | REST Method | Description |
 | -------- | ---- | ----------- | --- |
-| admin    | None   | POST        | Admin Page    |
-| about    | user     | POST        | Admin Page    |
-| warehouses | warehouse   |    GET         | Overview of Building    |
-| warehouses/<int:id> | warehouse   |    GET         | Overview of Building    |
+| admin    | None   | GET       | Admin Page    |
+| about    | user     | GET        | About Page    |
+| warehouses | warehouse   |    GET         | Overview of all warehouse    |
+| warehouses/<district:char> | warehouse   | GET | Show warehouses from that district |
+| warehouses/?page=<number:int> | | | Show warehouses in pages|
+| warehouses/<int:id> | warehouse   |    POST         |      |
 | transfer | transfer   |    GET         | show records  |
+| transfer/ | transfer |   | |
+| user | user | |
+| user/dashboard | | GET | Show his record
+| user/login | | |
+| user/logout | | |

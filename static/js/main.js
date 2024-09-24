@@ -14,4 +14,3 @@ $(window).scroll(function(e){
     else{
        $("button.button.is-link.modal-button").addClass("hidden");}
   });
-
