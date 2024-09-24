@@ -5,8 +5,10 @@ This is a basic warehouse management project, which is created by using ORM mode
 
 
 # Version applied in this project
-vDjango: 4.12
+Python: 3.8
+Django: 4.12
 PostgreSQL: 14.13
+
 
 # User who use this repository
 ## Admin
@@ -59,11 +61,12 @@ You are advised to make connection and changes in the DATABASE array from the pa
 | Url      | App | REST Method | Description |
 | -------- | ---- | ----------- | --- |
 | admin    | None   | GET       | Admin Page    |
-| about    | user     | GET        | About Page    |
+| about    | Page    | GET        | About Page    |
+| error    | Page | GET | Error Page
 | warehouses | warehouse   |    GET         | Overview of all warehouse    |
-| warehouses/<district:char> | warehouse   | GET | Show warehouses from that district |
-| warehouses/?page=<number:int> | | | Show warehouses in pages|
-| warehouses/<int:id> | warehouse   |    POST         |      |
+| warehouses/<district:str> | warehouse   | GET | Show warehouses from that district |
+| warehouses/?page=<number:int> | warehouse | GET | Show warehouses in pages |
+| warehouses/warehouse/<int:id> | warehouse   |    POST         |      |
 | transfer | transfer   |    GET         | show records  |
 | transfer/ | transfer |   | |
 | user | user | |
