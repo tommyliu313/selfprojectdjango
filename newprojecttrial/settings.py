@@ -78,6 +78,8 @@ WSGI_APPLICATION = 'newprojecttrial.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+
+# Tommy Database Settings (If you are Tommy, please remove other database settings)
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -88,6 +90,16 @@ DATABASES = {
     }
 }
 
+# Danny Database Settings (If you are Danny, please remove other database settings and #)
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql',
+#        'NAME': 'trialproject',
+#        'USER': 'dbadmin',
+#        'PASSWORD':'473261',
+#        'HOST': 'localhost'
+#    }
+#}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
