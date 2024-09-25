@@ -44,3 +44,29 @@
   top: 93.41%;
   bottom: 2.53%;
 }
+
+#google-maps-display{
+  height:100%;
+  width:100%;
+  max-width:100%;
+}
+
+#google-maps-display img{
+  max-height:none;
+  max-width:none!important;
+  background:none!important;
+}
+
+#google-map-frame{
+  height:100%;
+  width:100%;
+  border:0;
+}
+
+#google-map-block{
+  overflow:hidden;
+  resize:none;
+  max-width:100%;
+  width:1500px;
+  height:500px;
+}
