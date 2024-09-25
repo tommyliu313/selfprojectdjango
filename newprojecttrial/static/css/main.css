@@ -36,7 +36,7 @@
   ul#sns li {
     display: inline;
   }
-
+/*
   button.button.is-link.modal-button{
 
   position: relative;
@@ -44,6 +44,7 @@
   top: 93.41%;
   bottom: 2.53%;
 }
+  */
 
 #google-maps-display{
   height:100%;
