@@ -5,7 +5,7 @@ from django.shortcuts import render, get_object_or_404
 # show warehouse pages
 # passing warehouse info
 def warehouse(request):
-    pass
+    return render(request, 'warehouse/warehouse.html')
 
 # show warehouse 
 
