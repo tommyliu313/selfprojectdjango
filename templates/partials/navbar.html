@@ -43,6 +43,10 @@
                                 <a href="{% url 'warehouse' %}New_Territories" class="dropdown-item">New Territories</a>
                             </div>
                         </li>
+                        <li {% if 'service' in request.path %} class="nav-item mr-3 active" {% else %} class="nav-item mr-3" {% endif %}>
+                          <a class="nav-link" href={% url 'service' %} >
+                           <i class="fa-solid fa-box-open"></i>service</a>
+                         </li>                        
                         </ul>
                 
                         <ul class="navbar-nav ml-auto">
