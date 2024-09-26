@@ -73,3 +73,6 @@ You are advised to make connection and changes in the DATABASE array from the pa
 | user/dashboard | | GET | Show his record
 | user/login | | |
 | user/logout | | |
+
+
+

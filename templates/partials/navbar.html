@@ -26,13 +26,16 @@
                            <a class="nav-link" href={% url 'about' %} >
                             <i class="fa-solid fa-circle-info"></i>About</a>
                           </li>
+                          <!--
                           <li {% if 'warehouse' in request.path %} class="nav-item mr-3 active" {% else %} class="nav-item mr-3" {% endif %}>
-                            <a class="nav-link" href={% url 'warehouse' %}>
+                            <a class="nav-link">
                               <i class="fa-solid fa-warehouse"></i> Warehouse</a>
                           </li>
+                          -->
+
                           <li class="nav-item dropdown">
-                            <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">
-                              <i class="fa-solid fa-list"></i>District</a>
+                            <a href={% url 'warehouse' %} class="nav-link dropdown-toggle" data-toggle="dropdown">
+                              <i class="fa-solid fa-list"></i>Region</a>
                             <div class="dropdown-menu">
                                 <a href="" class="dropdown-item">Hong Kong Island</a>
                                 <a href="" class="dropdown-item">Kowloon</a>
@@ -60,12 +63,12 @@
                             </form>
                           </li>
                           
-                          <li  class="nav-item mr-3 active"  class="nav-item mr-3" >
-                            <a class="nav-link">
+                          <li {% if 'register' in request.path %} class="nav-item mr-3 active" {% else %}  class="nav-item mr-3" {% endif %}>
+                            <a class="nav-link" href={% url 'register' %}>
                               <i class="fas fa-user-plus"></i> Register</a>
                           </li>
-                          <li  class="nav-item mr-3 active"  class="nav-item mr-3" >
-                            <a class="nav-link">
+                          <li {% if 'login' in request.path %} class="nav-item mr-3 active" {% else %}  class="nav-item mr-3" {% endif %}>
+                            <a class="nav-link" href={% url 'login' %}>
                               <i class="fa-solid fa-key"></i>Login</a>
                           </li>
                           

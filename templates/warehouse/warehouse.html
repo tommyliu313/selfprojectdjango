@@ -3,11 +3,11 @@
 {% block content %}
 <div class="container-fluid">
     <div class="page-header">
-        <img src={% static "photo/Mini_Storage_rooms.jpg" %}
+        <img src={{warehouse.main_img.url}}
         width="1700px"
         height="350px"
         />
-        <h2 class=" pt-4 text-center text-bold text-primary">Wong Chuk Hang - E-Tat Branch</h2>
+        <h2 class=" pt-4 text-center text-bold text-primary">{{warehouse.title}}</h2>
         <h2 class="pt-4 text-center text-primary">Size and Price</h2>
 
     </div>
@@ -31,79 +31,9 @@
         <td>4 x 3</td>
         <td>12</td>
         <td>1,188</td>
-        <td>3,207</td>
-        <td>5,704</td>
-        <td>7,484</td>
-        <td>Available</td>
-        <td>Order Now</td>
-      </tr>
-      <tr>
-        <td>5 x 3</td>
-        <td>15</td>
-        <td>1,308</td>
-        <td>3,513</td>
-        <td>6,278</td>
-        <td>8,744</td>
-        <td>Available</td>
-        <td>Order Now</td>
-      </tr>
-      <tr>
-        <td>4 x 4</td>
-        <td>16</td>
-        <td>1,388</td>
-        <td>3,747</td>
-        <td>6,662</td>
-        <td>8,744</td>
-        <td>Available</td>
-        <td>Order Now</td>
-      </tr>
-      <tr>
-        <td>4 x 5</td>
-        <td>20</td>
-        <td>1,588</td>
-        <td>4,287</td>
-        <td>7,622</td>
-        <td>10,004</td>
-        <td>Available</td>
-        <td>Order Now</td>
-      </tr>
-      <tr>
-        <td>8 x 3</td>
-        <td>24</td>
-        <td>1,888</td>
-        <td>5,097</td>
-        <td>9,062</td>
-        <td>11,894</td>
-        <td>Available</td>
-        <td>Order Now</td>
-      </tr>
-      <tr>
-        <td>4 x 7</td>
-        <td>28</td>
-        <td>2,238</td>
-        <td>6,024</td>
-        <td>10,742</td>
-        <td>14,099</td>
-        <td>Available</td>
-        <td>Order Now</td>
-      </tr>
-      <tr>
-        <td>6 x 7</td>
-        <td>42</td>
-        <td>3,288</td>
-        <td>8,877</td>
-        <td>15,782</td>
-        <td>20,714</td>
-        <td>Available</td>
-        <td>Order Now</td>
-      </tr>
-      <tr>
-        <td>8 x 7</td>
-        <td>56</td>
-        <td>4,476</td>
-        <td>12,085</td>
-        <td>21,484</td>
-        <td>28,198</td>
+        <td>{{warehouse.threemonrent}}</td>
+        <td>{{warehouse.sixmonrent}}</td>
+        <td>{{warehouse.ninemonrent}}</td>
         <td>Available</td>
         <td>Order Now</td>
       </tr>
@@ -118,8 +48,7 @@
       <div class="row">
         <div class="col-md-4">
           <h2 class="py-4 text-primary">Contact Information</h2>
-          <h4 class="py-4 text-danger">ABC Mini 
-            storage-Wong Chuk Hang Branch
+          <h4 class="py-4 text-danger"> {{warehouse.title}}
           </h4>
           
           <h6 class="text-primary">Address:</h6>
