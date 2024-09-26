@@ -5,7 +5,7 @@ from .models import Warehouse
 class WarehouseAdmin(admin.ModelAdmin):
     list_display = ('id','title','region','district','floor','room','description','phone','main_img','img1','img2','threemonrent','sixmonrent','ninemonrent','is_listed')
     list_display_links = ('id','title')
-    list_filter = ('title',)
+    list_filter = ('region',)
     list_editable = ('is_listed',)
     search_fields = ('title','region','district',)
     list_per_page = 25
