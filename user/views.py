@@ -7,7 +7,6 @@ from transfer.models import Transfer
 
 # return to dashboard, show his information and record
 def dashboard(request):
-    user_info = get_object_or_404(User)
     return render(request, 'user/dashboard.html')
 
 

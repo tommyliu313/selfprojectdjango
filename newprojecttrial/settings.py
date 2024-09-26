@@ -90,7 +90,7 @@ DATABASES = {
     }
 }
 
-# Danny Database Settings (If you are Danny, please remove other database settings and #)
+# Danny Database Settings (If you are Danny, please remove other database settings and #, use your own configuration)
 #DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.postgresql',
@@ -100,6 +100,17 @@ DATABASES = {
 #        'HOST': 'localhost'
 #    }
 #}
+
+#Keung Database Settings (If you are Keung, please remove other database settings and #, use your own configuration)
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'trialproject',
+#         'USER': 'dbadmin',
+#         'PASSWORD':'KEUNG123',
+#         'HOST': 'localhost'
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

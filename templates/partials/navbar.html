@@ -37,9 +37,10 @@
                             <a href={% url 'warehouse' %} class="nav-link dropdown-toggle" data-toggle="dropdown">
                               <i class="fa-solid fa-list"></i>Region</a>
                             <div class="dropdown-menu">
-                                <a href="" class="dropdown-item">Hong Kong Island</a>
-                                <a href="" class="dropdown-item">Kowloon</a>
-                                <a href="" class="dropdown-item">New Territories</a>
+                              <a href="{% url 'warehouse' %} " class="dropdown-item">All</a>
+                                <a href="{% url 'warehouse' %}Hong_Kong_Island " class="dropdown-item">Hong Kong Island</a>
+                                <a href="{% url 'warehouse' %}Kowloon" class="dropdown-item">Kowloon</a>
+                                <a href="{% url 'warehouse' %}New_Territories" class="dropdown-item">New Territories</a>
                             </div>
                         </li>
                         </ul>

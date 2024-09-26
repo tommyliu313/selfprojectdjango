@@ -2,9 +2,13 @@ function openeye(){
     var valueofpassword = document.getElementById("password");
     if(valueofpassword.type === "password"){
         valueofpassword.type= "text";
+        $("#eye-icon-status").removeClass("fa-solid fa-eye");
+        $("#eye-icon-status").addClass("fa-solid fa-eye-slash");
     }
     else{
         valueofpassword.type= "password";
+        $("#eye-icon-status").addClass("fa-solid fa-eye");
+        $("#eye-icon-status").removeClass("fa-solid fa-eye-slash");
     }
 }
 

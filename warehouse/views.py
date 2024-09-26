@@ -10,15 +10,11 @@ def warehouse_one(request, warehouse_id):
     return render(request, 'warehouse/warehouse.html', context)
 # Create your views here.
 
-# show warehouse pages
-# passing warehouse info
-# def warehouse(request):
-#    return render(request, 'warehouse/warehouse.html')
-
 def warehouse(request):
     return render(request, 'warehouse/warehouses.html')
 # show warehouse 
-def show_region(request):
+def show_region(request, region):
+    region = get_object_or_404(Warehouse, )
     pass
 
 

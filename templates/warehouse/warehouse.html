@@ -2,13 +2,10 @@
 {% load static %}
 {% block content %}
 <div class="container-fluid">
-    <div class="page-header">
-        <img src={{warehouse.main_img.url}}
-        width="1700px"
-        height="350px"
-        />
-        <h2 class=" pt-4 text-center text-bold text-primary">{{warehouse.title}}</h2>
-        <h2 class="pt-4 text-center text-primary">Size and Price</h2>
+    <div class="page-header text-center">
+        <img src={{warehouse.main_img.url}}  class="img-fluid"/>
+        <h2 class=" pt-4 text-bold text-primary">{{warehouse.title}}</h2>
+        <h2 class="pt-4 text-primary">Size and Price</h2>
 
     </div>
 </div>
@@ -41,6 +38,19 @@
   </table>
 </div>
 
+<div class="container">
+  <div class="row">
+    <div class="col-md-5">
+
+    </div>
+    <div class="col-md-7 bg-info">
+      <h1 class="text-primary">Heading</h1>
+      <p>
+      {{warehouse.description}}
+      </p>
+    </div>
+  </div>
+</div>
 <!--location map-->
 
 <section id="Contact information" class="py-4">
@@ -67,7 +77,7 @@
           <h6 class="text-primary">
             24 Hours Hotline:</h6>
           <p class="text-primary">
-            8888 0000
+            {{warehouse.phone}}
           </p>
         </div>
 
@@ -76,7 +86,7 @@
 
 <div id="google-map-block">
   <div id="google-maps-display">
-    <iframe id="google-map-frame" frameborder="0" src="https://www.google.com/maps/embed/v1/search?q=wong+chuk+hang,+E+Tat+factory+building&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div>
+    <iframe id="google-map-frame" frameborder="0" src="https://www.google.com/maps/embed/v1/search?q={{warehouse.title}}&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div>
     <a class="my-codefor-googlemap" href="https://www.bootstrapskins.com/themes" id="grab-map-authorization">premium bootstrap themes</a>
             </div>
         </div>
