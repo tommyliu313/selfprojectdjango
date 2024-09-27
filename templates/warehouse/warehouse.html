@@ -1,11 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<script type="text/javascript">
-$("#ordernow").click(function(){
-  $("#modal fade").css("visibility","visible");
-})
-</script>
 <div class="container-fluid">
     <div class="page-header text-center">
         <img src={{warehouse.main_img.url}}  class="img-fluid"/>
@@ -38,7 +33,7 @@ $("#ordernow").click(function(){
         <td>{{warehouse.ninemonrent}}</td>
         <td>Available</td>
         <td>
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#inquiryModal">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#inquiryModal">
             Order Now
           </button>
         </td>
@@ -47,60 +42,6 @@ $("#ordernow").click(function(){
   </table>
 </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-5">
-
-    </div>
-    <div class="col-md-7 bg-info">
-      <h1 class="text-primary">Heading</h1>
-      <p>
-      {{warehouse.description}}
-      </p>
-    </div>
-  </div>
-</div>
-<!--location map-->
-
-<section id="Contact information" class="py-4">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <h2 class="py-4 text-primary">Contact Information</h2>
-          <h4 class="py-4 text-danger"> {{warehouse.title}}
-          </h4>
-          
-          <h6 class="text-primary">Address:</h6>
-          <p class="text-primary">
-            8/F., E-Tat Factory Building,
-            Heung Yip Road,
-            Wong Chuk Hang Road,
-            Hong Kong.
-          </p>
-          <h6 class="text-primary">
-            Opening hours:</h6>
-          <p class="text-primary">
-            Mon to Sun 
-            8:00 - 24:00
-          </p>
-          <h6 class="text-primary">
-            24 Hours Hotline:</h6>
-          <p class="text-primary">
-            {{warehouse.phone}}
-          </p>
-        </div>
-
-        
-            <div class="col-md-8">
-
-<div id="google-map-block">
-  <div id="google-maps-display">
-    <iframe id="google-map-frame" frameborder="0" src="https://www.google.com/maps/embed/v1/search?q={{warehouse.title}}&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div>
-    <a class="my-codefor-googlemap" href="https://www.bootstrapskins.com/themes" id="grab-map-authorization">premium bootstrap themes</a>
-            </div>
-        </div>
-</div>
-</section>  
 
 <div class="modal fade" id="inquiryModal" role="dialog">
   <div class="modal-dialog">
@@ -165,5 +106,60 @@ $("#ordernow").click(function(){
     </div>
   </div>
 </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-5">
+
+    </div>
+    <div class="col-md-7 bg-info">
+      <h1 class="text-primary">Heading</h1>
+      <p>
+      {{warehouse.description}}
+      </p>
+    </div>
+  </div>
+</div>
+<!--location map-->
+
+<section id="Contact information" class="py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h2 class="py-4 text-primary">Contact Information</h2>
+          <h4 class="py-4 text-danger"> {{warehouse.title}}
+          </h4>
+          
+          <h6 class="text-primary">Address:</h6>
+          <p class="text-primary">
+            8/F., E-Tat Factory Building,
+            Heung Yip Road,
+            Wong Chuk Hang Road,
+            Hong Kong.
+          </p>
+          <h6 class="text-primary">
+            Opening hours:</h6>
+          <p class="text-primary">
+            Mon to Sun 
+            8:00 - 24:00
+          </p>
+          <h6 class="text-primary">
+            24 Hours Hotline:</h6>
+          <p class="text-primary">
+            {{warehouse.phone}}
+          </p>
+        </div>
+
+        
+            <div class="col-md-8">
+
+<div id="google-map-block">
+  <div id="google-maps-display">
+    <iframe id="google-map-frame" frameborder="0" src="https://www.google.com/maps/embed/v1/search?q={{warehouse.title}}&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div>
+    <a class="my-codefor-googlemap" href="https://www.bootstrapskins.com/themes" id="grab-map-authorization">premium bootstrap themes</a>
+            </div>
+        </div>
+</div>
+</section>  
 
 {% endblock %}

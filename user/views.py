@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
-from user.models import User
+#from user.models import User
+from django.contrib.auth.models import User
 from transfer.models import Transfer
 from django.contrib import auth
 
@@ -20,7 +21,7 @@ def login(request):
             auth.login(request, user)
             return redirect('dashboard')
         else:
-            return redirect('login')
+            user = User
     else:
         return render(request, 'user/login.html')
 
