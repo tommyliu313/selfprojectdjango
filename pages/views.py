@@ -11,3 +11,9 @@ def about(request):
 
 def service(request):
     return render(request, 'pages/service.html')
+
+def error_404_view(request, exception):
+    return render(request,'pages/exception/error_404.html')
+
+def error_500_view(request):
+    return render(request, 'pages/exception/error_500.html')
