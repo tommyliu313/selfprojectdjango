@@ -11,10 +11,18 @@ def dashboard(request):
 
 
 def login(request):
-    return render(request, 'user/login.html')
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+    else:
+        return render(request, 'user/login.html')
 
 def logout(request):
     return render(request, 'user/logout.html')
 
 def register(request):
-    return render(request, 'user/register.html')
+    if request.method == 'POST':
+        email = request.POST['email']
+        password = request.POST['password']
+    else:    
+        return render(request, 'user/register.html')

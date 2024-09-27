@@ -1,6 +1,27 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+<script type="text/javascript">
+  function openeye2(){
+    var valueofpassword2 = document.getElementById("password2");
+    if(valueofpassword2.type === "password"){
+        valueofpassword2.type= "text";
+        $("#eye-icon-status-2").removeClass("fa-solid fa-eye");
+        $("#eye-icon-status-2").addClass("fa-solid fa-eye-slash");
+    }
+    else{
+        valueofpassword2.type= "password";
+        $("#eye-icon-status-2").addClass("fa-solid fa-eye");
+        $("#eye-icon-status-2").removeClass("fa-solid fa-eye-slash");
+    }
+}
+function validate(){
+    if(document.getElementById("password").value != document.getElementById("password2").value){
+      return false;
+      alert("Please enter the correct value of reset password column.");
+    }
+  }
+</script>
 <section id="register" class="bg-dark py-5">
     <div class="container">
       <div class="row">
@@ -10,7 +31,8 @@
               <h4><i class="fas fa-database"></i> Register</h4>
             </div>
             <div class="card-body">
-              <form action="index.html" method="POST" onsubmit="return validate()">
+              <form action={% url 'register' %} method="POST" onsubmit="validate()">
+                {% csrf_token %}
                 <div class="form-group">
                   <label for="first_name">First Name</label>
                   <input
@@ -73,8 +95,8 @@
                     required
                   />
                    <div class="input-group-append">
-                    <button onclick="openeyeforconfirmpassword()" type="button">
-                      <i id="eye-icon-status-too" class="fa-solid fa-eye"></i>
+                    <button onclick="openeye2()" type="button">
+                      <i id="eye-icon-status-2" class="fa-solid fa-eye"></i>
                     </button>
                 </div>
                 </div>
