@@ -1,6 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+<script type="text/javascript">
+  function validatelogin(){
+    if(document.getElementById("username").value == null || document.getElementById("password").value == null){
+      alert("Please fill up all the required column.");
+      return false;
+    }
+  }
+</script>
 <section id="login" class="bg-dark py-5">
     <div class="container">
       <div class="row">
@@ -11,7 +19,7 @@
               <h4> <i class="fas fa-key"></i> Login</h4>
             </div>
             <div class="card-body">
-              <form action={% url 'login' %} method="POST">
+              <form action={% url 'login' %} method="POST" onsubmit="return validatelogin()">
                 {% csrf_token %}
                 <label for="username">Username</label>
                 <div class="form-group">
@@ -19,6 +27,7 @@
                     type="text"
                     name="username"
                     class="form-control"
+                    id="username"
                     required
                   />
                 </div>

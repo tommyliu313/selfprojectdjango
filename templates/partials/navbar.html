@@ -45,7 +45,7 @@
                         </li>
                         <li {% if 'service' in request.path %} class="nav-item mr-3 active" {% else %} class="nav-item mr-3" {% endif %}>
                           <a class="nav-link" href={% url 'service' %} >
-                           <i class="fa-solid fa-box-open"></i>service</a>
+                           <i class="fa-solid fa-box-open"></i>Service</a>
                          </li>                        
                         </ul>
                 
@@ -55,7 +55,7 @@
                           
                           <!--dashboard link-->
                           <li class="nav-item mv-3 active"  class="nav-item mr-3" >
-                            <a class="nav-link"> Welcome {{user.username}} (dashboard)</a>
+                            <a class="nav-link" href="/user/dashboard"> Welcome {{user.username}}(dashboard)</>
                           </li>
                           <!--logout link-->
                           <li class="nav-item mr-3">

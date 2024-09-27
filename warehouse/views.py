@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Warehouse
+from django.core.paginator import Paginator
 # Create your views here.
 
 # show warehouse pages
@@ -12,10 +13,17 @@ def warehouse_one(request, warehouse_id):
 
 def warehouse(request):
     return render(request, 'warehouse/warehouses.html')
+
 # show warehouse 
 def show_region(request, region):
-    region = get_object_or_404(Warehouse, )
-    pass
+
+    var_region = Warehouse.objects.filter().order_by('region')
+    paginator = Paginator(var_region, 6)
+    page = request.GET.get('page')
+    paged_listings = paginator.get_page(page)
+    context = {'region': var_region}
+    return render(request,'warehouse/region.html', context)
+    
 
 
 def order(request):

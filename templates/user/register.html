@@ -15,7 +15,7 @@
         $("#eye-icon-status-2").removeClass("fa-solid fa-eye-slash");
     }
 }
-function validate(){
+function validatepassword(){
     if(document.getElementById("password").value != document.getElementById("password2").value){
       alert("Please enter the correct value of reset password column.");
       return false;
@@ -31,7 +31,7 @@ function validate(){
               <h4><i class="fas fa-database"></i> Register</h4>
             </div>
             <div class="card-body">
-              <form action={% url 'register' %} method="POST" onsubmit="return validate()">
+              <form action={% url 'register' %} method="POST" onsubmit="validatepassword()">
                 {% csrf_token %}
                 <div class="form-group">
                   <label for="first_name">First Name</label>
