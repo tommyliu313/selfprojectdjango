@@ -20,7 +20,7 @@ district_choices = {
 }
 
 region_choices = {
-    "Hong_Kong_Island": "Hong Kong Island",
-    "New_Territories": "New Territories",
+    "Hong_Kong_Island": "Hong_Kong_Island",
+    "New_Territories": "New_Territories",
     "Kowloon": "Kowloon"
 }

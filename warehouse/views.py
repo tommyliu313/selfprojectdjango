@@ -12,21 +12,21 @@ def warehouse_one(request, warehouse_id):
 # Create your views here.
 
 def warehouse(request):
-    var_region = Warehouse.objects.filter().order_by('region')
-    paginator = Paginator(var_region, 6)
+    warehouse_item = Warehouse.objects.all()
+    paginator = Paginator(warehouse_item, 6)
     page = request.GET.get('page')
     paged_listings = paginator.get_page(page)
-    context = {'warehouse': var_region}
+    context = {'warehouse': paged_listings}
     return render(request, 'warehouse/warehouses.html', context)
 
 # show warehouse 
-def show_region(request, region):
+def show_region(request, region_name):
 
-    var_region = Warehouse.objects.filter().order_by('region')
+    var_region = Warehouse.objects.filter(region=region_name).values()
     paginator = Paginator(var_region, 6)
     page = request.GET.get('page')
     paged_listings = paginator.get_page(page)
-    context = {'region': var_region}
+    context = {'region': paged_listings}
     return render(request,'warehouse/region.html', context)
     
 
