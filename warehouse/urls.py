@@ -5,5 +5,5 @@ urlpatterns = [
     path('<int:warehouse_id>', views.warehouse_one, name='warehouse'),
     path('',views.warehouse, name="warehouse"),
     path('<str:region_name>', views.show_region, name='region'),
-    path('<str:region_name>/<slug:slug>', views.show_region, name='showoneregion' )
+    path('<slug:slug>', views.show_region_slug, name='region_slug' )
 ]

@@ -29,7 +29,10 @@ def show_region(request, region_name):
     context = {'region': paged_listings}
     return render(request,'warehouse/region.html', context)
     
-
+def show_region_slug(request,slugword):
+    variable = Warehouse.objects.get(slug=slugword)
+    context = {'warehouse': variable}
+    return render(request, 'warehouse/warehouse.html', context)
 
 def order(request):
     pass
