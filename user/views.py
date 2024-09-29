@@ -21,12 +21,14 @@ def login(request):
             auth.login(request, user)
             return redirect('dashboard')
         else:
-            user = User
+            return redirect("/exception/error_404.html")
     else:
         return render(request, 'user/login.html')
 
 def logout(request):
-    return render(request, 'user/redirect.html')
+    if request.method == 'POST':
+        auth.logout(request)
+    return redirect("index")
 
 def register(request):
     if request.method == 'POST':
@@ -35,5 +37,8 @@ def register(request):
         username = request.POST['username']
         email = request.POST['email']
         password = request.POST['password']
+        user = User.objects.create_user(first_name=first_name, last_name=last_name, username=username,email=email,password=password)
+        user.save()
+        return redirect('login')
     else:
         return render(request, 'user/register.html')

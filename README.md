@@ -34,6 +34,12 @@ sudo -u postgres psql
 
 You are advised to make connection and changes in the DATABASE array from the path "newprojecttrial/settings.py".
 
+# How to run this django website framework?
+Please install the language based on the version applied in this project.
+
+You should type "pip freeze > requirements.txt" to install the python package.
+
+Then you run the server by typing "python manage.py runserver".
 
 # Navbar Should Contain
 * About
