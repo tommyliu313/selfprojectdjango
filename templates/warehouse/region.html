@@ -7,13 +7,12 @@
       <div class="row">
         <!-- Listing 1 -->
          {% if region %}
-         {% for all_region in region %}
+         {% for region_card in region %}
          <div class="col-md-6 col-lg-4 mb-4">
           <div class="card listing-preview">
             <img
               class="card-img-top"
-              src={{all_region.main_img.url}}
-              alt=""
+              src={{region_card.main_img.url}}
             />
             <div class="card-img-overlay">
               <h2>
@@ -26,21 +25,21 @@
               <div class="listing-heading text-center">
                 <h4 class="text-primary"></h4>
                 <p>
-                  <h2><i class="fas fa-map-marker text-info"></i> {{all_region.title}} </h2>
+                  <h2><i class="fas fa-map-marker text-info"></i> {{region_card.title}} </h2>
                 </p>
               </div>
               <hr />
               <div class="row py-2 text-dark">
                 <div class="col-6">
-                  <i class="fas fa-th-large"></i> Sqft: 2500
+                  <i class="fas fa-th-large"></i> {{region_card.region}}
                 </div>
                 <div class="col-6">
-                  <i class="fas fa-dumbbell"></i> ClubHouse: 2
+                  <i class="fas fa-dumbbell"></i> {{region_card.district}}
                 </div>
               </div>
               <div class="row py-2 text-dark">
                 <div class="col-6">
-                  <i class="fas fa-bed"></i> Bedrooms: 3
+                  <i class="fas fa-bed"></i> {{region_card.phone}}
                 </div>
                 <div class="col-6">
                   <i class="fas fa-bath"></i> Bathrooms: 2
@@ -58,7 +57,7 @@
                 </div>
               </div>
               <hr />
-              <a href={% url 'all_region' all_region.id %} class="btn btn-primary btn-block">More Info</a>
+              <a href="{{ region_card.get_absolute_url}}" class="btn btn-primary btn-block">More Info</a>
             </div>
           </div>
         </div>

@@ -9,5 +9,6 @@ class WarehouseAdmin(admin.ModelAdmin):
     list_editable = ('is_listed',)
     search_fields = ('title','region','district',)
     list_per_page = 25
+    prepopulated_fields = {"slug": ("region","title")}
     
 admin.site.register( Warehouse, WarehouseAdmin)    

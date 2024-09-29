@@ -17,5 +17,11 @@ class Warehouse(models.Model):
     sixmonrent = models.DecimalField(decimal_places=2, max_digits=7)
     ninemonrent = models.DecimalField(decimal_places=2, max_digits=7)
     is_listed = models.BooleanField()
+    slug = models.SlugField(default="", null=False)
+    
     def __str__(self):
-        return self.title    
+        return self.title
+    
+    def get_absolute_url(self):
+        return "/region/{slug}/".format(slug=self.slug)
+    
