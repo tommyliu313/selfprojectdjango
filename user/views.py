@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from django.contrib.auth.decorators import login_required
 #from user.models import User
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from transfer.models import Transfer
 from django.contrib import auth
@@ -8,7 +8,10 @@ from django.contrib import auth
 # Create your views here.
 
 # return to dashboard, show his information and record
+@login_required
 def dashboard(request):
+    #transfer_rec = Transfer.objects().all()
+    #context = {'transfer': transfer_rec}
     return render(request, 'user/dashboard.html')
 
 
@@ -25,6 +28,7 @@ def login(request):
     else:
         return render(request, 'user/login.html')
 
+@login_required
 def logout(request):
     if request.method == 'POST':
         auth.logout(request)
