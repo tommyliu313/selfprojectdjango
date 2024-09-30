@@ -12,7 +12,11 @@
           <div class="card listing-preview">
             <img
               class="card-img-top"
+              {% if warehouse_card.main_img.url %}
               src={{warehouse_card.main_img.url}}
+              {% else %}
+              src=""
+              {% endif %}
               alt=""
             />
             <div class="card-img-overlay">

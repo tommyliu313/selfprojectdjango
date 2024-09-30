@@ -22,7 +22,7 @@ def warehouse(request):
 # show warehouse 
 def show_region(request, region_name):
 
-    var_region = Warehouse.objects.filter(region=region_name).values()
+    var_region = Warehouse.objects.filter(region=region_name)
     paginator = Paginator(var_region, 6)
     page = request.GET.get('page')
     paged_listings = paginator.get_page(page)
