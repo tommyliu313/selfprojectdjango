@@ -1,5 +1,48 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<h1>Service.html</h1>
+<section id="about" class="py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <h2 class="text-info">Our Service</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quisquam fuga, facere fugiat tenetur eveniet earum quasi rem. Quos atque ipsam sunt beatae minus eveniet ab, sit commodi voluptatem illo!
+          </p>
+           </div>
+        <div class="col-md-5">
+            <img
+            class="card-img-top"
+            src={% static "photo/photo1.jpg" %}
+          />
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-7">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente facere assumenda vel ullam quia, exercitationem nostrum harum quod provident dolorum. Unde pariatur recusandae magni quo ut omnis tempora architecto ipsum!
+            </p>
+        </div>
+        <div class="col-md-5">
+            <img
+            class="card-img-top"
+            src={% static "photo/photo2.jpg" %}
+          />
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-md-7">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente facere assumenda vel ullam quia, exercitationem nostrum harum quod provident dolorum. Unde pariatur recusandae magni quo ut omnis tempora architecto ipsum!
+                </p>
+            </div>
+            <div class="col-md-5">
+                <img
+                class="card-img-top"
+                src={% static "photo/photo3.jpg" %}
+              />
+            </div>
+            </div>
+  </section>
+
 {% endblock %}

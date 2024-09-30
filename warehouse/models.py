@@ -7,6 +7,8 @@ class Warehouse(models.Model):
     title = models.CharField(max_length=200)
     region = models.CharField(max_length=50, choices=region_choices.items())
     district = models.CharField(max_length=50, choices=district_choices.items())
+    street = models.CharField(max_length=200, null=True)
+    building = models.CharField(max_length=200, null=True)
     floor = models.IntegerField()
     room = models.CharField()
     description = models.TextField()
