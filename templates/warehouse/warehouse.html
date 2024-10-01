@@ -60,9 +60,6 @@
           {% else %}
           <input type="hidden" name="user_id" value="0" />
           {% endif %}
-          <!-- add realtor email-->
-          <input type="hidden" name="realtor_email" value="" />
-          <input type="hidden" name="listing_id" value="" />
           <div class="form-group">
               <label for="property_name" class="col-form-label">Warehouse:</label>
               <input
@@ -73,17 +70,17 @@
               />
             <label for="startdate" class="col-form-label">Rent Date:</label>
             <br>
-            <input type="date" name="startcalendar" id="">
+            <input type="date" name="startcalendar" id="" required>
           </div>
           <div class="form-group">
             <label for="enddate" class="col-form-label">End Date:</label>
             <br>
-            <input type="date" name="endcalendar" id="">
+            <input type="date" name="endcalendar" id="" required>
           </div>
           <div class="form-group">
             <label for="phone" class="col-form-label"> Choose Rent Period:</label>
             <br>
-            <select name="rent_choose" id="rent_choose" onclick="onclickchange()">
+            <select name="rent_choose" id="rent_choose" onclick="onclickchange()" required>
               <option value="{{warehouse.threemonrent}}">3 Month</option>
               <option value="{{warehouse.sixmonrent}}">6 Month</option>
               <option value="{{warehouse.ninemonrent}}">9 Month</option>
