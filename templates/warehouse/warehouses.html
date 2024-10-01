@@ -62,14 +62,11 @@
                 </div>
               </div>
               <hr />
-              <button onclick="document.location.href='{% url 'warehouse' warehouse_card.id %}'"  class="button btn btn-dark btn-block" type="button">
-                More Address Info
-              </button>
+              <a href={{warehouse_card.id}} class="button btn btn-dark btn-block" type="button">
+                More Address Info           </a>
             </div>
           </div>
         </div>
-        <div class="row">
-    </div>
         {% endfor %}
         {% else %}
         <h1>No Warehouse can be shown</h1>
