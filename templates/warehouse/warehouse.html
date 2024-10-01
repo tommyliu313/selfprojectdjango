@@ -83,12 +83,15 @@
           <div class="form-group">
             <label for="phone" class="col-form-label"> Choose Rent Period:</label>
             <br>
-            <select name="rent_choose" id="rent_choose">
-              <option value="">3 Month</option>
-              <option value="">6 Month</option>
-              <option value="">9 Month</option>
+            <select name="rent_choose" id="rent_choose" onclick="onclickchange()">
+              <option value="{{warehouse.threemonrent}}">3 Month</option>
+              <option value="{{warehouse.sixmonrent}}">6 Month</option>
+              <option value="{{warehouse.ninemonrent}}">9 Month</option>
             </select>
           </div>
+          <p>
+            Rent will be paid: <span id="valofrent"></span>
+          </p>
           <div class="form-group">
             <label for="message" class="col-form-label">Message:</label>
             <textarea name="message" class="form-control"></textarea>
@@ -183,6 +186,12 @@
             </div>
         </div>
 </div>
-</section>  
+</section>
+<script type="text/javascript">
+  function onclickchange(){
+  var val = document.getElementById("rent_choose");
+  document.getElementById("valofrent").innerHTML = val.options[val.selectedIndex].value;
+  }
+</script>
 
 {% endblock %}
