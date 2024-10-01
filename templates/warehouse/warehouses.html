@@ -19,13 +19,6 @@
               {% endif %}
               alt=""
             />
-            <div class="card-img-overlay">
-              <h2>
-                <span class="badge badge-secondary text-white"
-                  ></span
-                >
-              </h2>
-            </div>
             <div class="card-body">
               <div class="listing-heading text-center">
                 <h4 class="text-primary"></h4>
@@ -62,11 +55,14 @@
                 </div>
               </div>
               <hr />
-              <a href={{warehouse_card.id}} class="button btn btn-dark btn-block" type="button">
-                More Address Info           </a>
+              <button onclick="document.location.href='{% url 'warehouse' warehouse_card.id %}'"  class="button btn btn-dark btn-block" type="button">
+                More Address Info
+              </button>
             </div>
           </div>
         </div>
+        <div class="row">
+    </div>
         {% endfor %}
         {% else %}
         <h1>No Warehouse can be shown</h1>
