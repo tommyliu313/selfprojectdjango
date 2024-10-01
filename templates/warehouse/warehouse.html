@@ -53,7 +53,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="" method="POST">
+        <form action="" method="POST" onSubmit="validate()">
           {% csrf_token %}
           {% if user.is_authenticated %}
           <input type="hidden" name="user_id" value="">
@@ -70,12 +70,12 @@
               />
             <label for="startdate" class="col-form-label">Rent Date:</label>
             <br>
-            <input type="date" name="startcalendar" id="" required>
+            <input type="date" name="startcalendar" id="startcalendar" required>
           </div>
           <div class="form-group">
             <label for="enddate" class="col-form-label">End Date:</label>
             <br>
-            <input type="date" name="endcalendar" id="" required>
+            <input type="date" name="endcalendar" id="endcalendar" required>
           </div>
           <div class="form-group">
             <label for="phone" class="col-form-label"> Choose Rent Period:</label>
@@ -188,6 +188,12 @@
   function onclickchange(){
   var val = document.getElementById("rent_choose");
   document.getElementById("valofrent").innerHTML = val.options[val.selectedIndex].value;
+  }
+  function validate(){
+    if(document.getElementById("startcalendar").value == document.getElementById("endcalendar").value){
+      alert("Dates should not be the same");
+      return false;
+    }
   }
 </script>
 

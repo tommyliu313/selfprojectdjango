@@ -41,13 +41,6 @@ You should type "pip freeze > requirements.txt" to install the python package.
 
 Then you run the server by typing "python manage.py runserver".
 
-# Navbar Should Contain
-* About
-* Districts
-* Services
-* Login
-* Register
-
 # URL Path Planning
 ## Example from Sir
 | Url      | App | REST Method | Description |
@@ -64,20 +57,22 @@ Then you run the server by typing "python manage.py runserver".
 | accounts/dashboard | accounts     |   GET          | Dashboard of registered user    |
 | contacts     |  contacts    | GET         |     |
 
+## Our Map
 | Url      | App | REST Method | Description |
 | -------- | ---- | ----------- | --- |
 | admin    | None   | GET       | Admin Page    |
 | about    | Page    | GET        | About Page    |
 | error    | Page | GET | Error Page
+| service | Page | GET| Service Page
 | warehouses | warehouse   |    GET         | Overview of all warehouse    |
-| warehouses/<district:str> | warehouse   | GET | Show warehouses from that district |
+| warehouses/<region:str> | warehouse   | GET | Show warehouses from that district |
 | warehouses/?page=<number:int> | warehouse | GET | Show warehouses in pages |
-| warehouses/warehouse/<int:id> | warehouse   |    POST         |      |
+| warehouse/<id:int> | warehouse   |    POST         |  Show independent warehouse record  |
 | transfer | transfer   |    GET         | show records  |
 | transfer/ | transfer |   | |
 | user | user | |
-| user/dashboard | | GET | Show his record
-| user/login | | |
+| user/dashboard | user | GET | Show his record
+| user/login | user |POST | User Login
 | user/logout | | |
 
 
