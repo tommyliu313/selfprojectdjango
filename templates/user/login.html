@@ -3,6 +3,7 @@
 {% block content %}
 <script type="text/javascript">
   function validatelogin(){
+    event.preventDefault();
     if(document.getElementById("username").value == null || document.getElementById("password").value == null){
       alert("Please fill up all the required column.");
       return false;

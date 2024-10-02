@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Warehouse
 from django.core.paginator import Paginator
+from django.contrib.auth.decorators import login_required
+
 # Create your views here.
 
 # show warehouse pages
@@ -34,12 +36,11 @@ def show_region(request, region_name):
 #    context = {'warehouse': variable}
 #    return render(request, 'warehouse/warehouse.html', context)
 
-def process_order(request):
+@login_required
+def processorder(request):
     if request.method == "POST":
         start_calendar = request.POST['startcalendar']
         end_calendar = request.POST['endcalendar']
         rentchoose = request.POST['rent_choose']
     else:
-        pass
-        
-               
+        return render(request,'pages/exception/error_404.html')      

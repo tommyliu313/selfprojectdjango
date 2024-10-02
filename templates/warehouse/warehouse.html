@@ -53,7 +53,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="" method="POST" onSubmit="validate()">
+        <form action={% url 'processorder' %} method="POST" onSubmit="validate()">
           {% csrf_token %}
           {% if user.is_authenticated %}
           <input type="hidden" name="user_id" value="">
@@ -67,31 +67,33 @@
                 value="{{warehouse.title}}"
                 class="form-control"
                 name="title"
+                disabled
               />
             <label for="startdate" class="col-form-label">Rent Date:</label>
             <br>
-            <input type="date" name="startcalendar" id="startcalendar" required>
+            <input type="date" name="startcalendar" id="startcalendar" class="form-control" required>
           </div>
-          <div class="form-group">
-            <label for="enddate" class="col-form-label">End Date:</label>
-            <br>
-            <input type="date" name="endcalendar" id="endcalendar" required>
-          </div>
+
           <div class="form-group">
             <label for="phone" class="col-form-label"> Choose Rent Period:</label>
             <br>
-            <select name="rent_choose" id="rent_choose" onclick="onclickchange()" required>
+            <select name="rent_choose" id="rent_choose" class="form-select" onclick="onclickchange()" required>
               <option value="{{warehouse.threemonrent}}">3 Month</option>
               <option value="{{warehouse.sixmonrent}}">6 Month</option>
               <option value="{{warehouse.ninemonrent}}">9 Month</option>
             </select>
           </div>
+          <div class="form-group">
+            <label for="enddate" class="col-form-label">End Date:</label>
+            <br>
+            <input type="date" name="endcalendar" id="endcalendar" class="form-control" required>
+          </div>
           <p>
             Rent will be paid: <span id="valofrent"></span>
           </p>
           <div class="form-group">
-            <label for="message" class="col-form-label">Message:</label>
-            <textarea name="message" class="form-control"></textarea>
+            <label for="note" class="col-form-label">Note:</label>
+            <textarea name="note" class="form-control"></textarea>
           </div>
           <hr />
           <input type="reset" value="Reset" class="btn btn-block btn-danger" name="Reset">
@@ -190,11 +192,29 @@
   document.getElementById("valofrent").innerHTML = val.options[val.selectedIndex].value;
   }
   function validate(){
+    event.preventDefault();
     if(document.getElementById("startcalendar").value == document.getElementById("endcalendar").value){
       alert("Dates should not be the same");
       return false;
     }
   }
+
+  $("#startcalendar").change(function(){
+    var rent_choose_js = document.getElementById("rent_choose");
+    var textofrent_choose = rent_choose_js.options[rent_choose_js.selectedIndex].text;
+    switch(textofrent_choose){
+      case "3 Month":
+        y = Number(3);
+      case "6 Month":
+        y = Number(6);
+      case "9 Month":
+        y = Number(9);        
+    }
+    var startval = new Date($("#startcalendar").val());
+    startval.setMonth(startval.getMonth() + y);
+    $("#endcalendar").val(startval.toISOString().split('T')[0]);
+
+  })
 </script>
 
 {% endblock %}

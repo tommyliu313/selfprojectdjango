@@ -16,6 +16,7 @@
     }
 }
 function validatepassword(){
+  event.preventDefault();
     if(document.getElementById("password").value != document.getElementById("password2").value){
       alert("Please enter the correct value of reset password column.");
       return false;
