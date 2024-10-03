@@ -42,5 +42,7 @@ def processorder(request):
         start_calendar = request.POST['startcalendar']
         end_calendar = request.POST['endcalendar']
         rentchoose = request.POST['rent_choose']
+        title = request.POST['title']
+        note = request.POST['note']
     else:
         return render(request,'pages/exception/error_404.html')      
